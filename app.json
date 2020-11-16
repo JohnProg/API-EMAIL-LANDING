@@ -1,0 +1,8 @@
+{
+  "name": "API for a landing page using Node.js",
+  "description": "A simple API for a landing page.",
+  "repository": "https://github.com/JohnProg/API-EMAIL-LANDING",
+  "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/main/public/node.svg",
+  "keywords": ["node", "express", "heroku"],
+  "image": "heroku/nodejs"
+}
