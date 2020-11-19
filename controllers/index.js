@@ -26,6 +26,7 @@ const sendQuote = (req, res) => {
   const from = process.env.EMAIL_SENDER;
   const to = process.env.EMAIL_RECEIVER;
   const subject = `Nueva cotización - ${fullname}`;
+  // TODO: Save to firebase
   // TODO: Refactor Template
   const output = `
       <h3>Nueva cotización</h3>

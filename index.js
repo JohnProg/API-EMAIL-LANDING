@@ -1,5 +1,6 @@
 const express = require("express");
 const morgan = require("morgan");
+const cors = require("cors");
 const bodyParser = require("body-parser");
 const mainRouter = require("./routes");
 const server = express();
@@ -12,6 +13,7 @@ server.use(
     ":remote-addr - :remote-user [:date] ':method :url' :status :response-time ms - :res[content-length] :body - :req[content-length] ':user-agent'"
   )
 );
+server.use(cors());
 
 server.use("/api/v1", mainRouter);
 
