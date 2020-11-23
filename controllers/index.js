@@ -1,11 +1,7 @@
-const {
-  sendMailContactUs,
-  sendMailQuotation,
-  fetchAllClients,
-} = require("./../repositories");
+const { sendMailContactUs, sendMailQuotation } = require("./../repositories");
 
 const helloWorld = async (_req, res) => {
-  res.json(await fetchAllClients());
+  res.json("Hi!");
 };
 
 const contactUs = (req, res) => {
