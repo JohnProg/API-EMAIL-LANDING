@@ -1,17 +1,15 @@
 const express = require("express");
-const { contactUs, sendQuote } = require("./../controllers");
-const { validate } = require("../helpers/validator");
+const { helloWorld, contactUs, sendQuote } = require("./../controllers");
+const { validate } = require("../validations");
 const {
   contactUsValidationRules,
   sendQuoteValidationRules,
-} = require("../helpers/validator/rules");
+} = require("../validations/rules");
 
 const router = express.Router();
 
-router.get("/", function (_req, res) {
-  res.json({ name: "hi" });
-});
-
+// TODO: Move validators to controllers
+router.get("/", helloWorld);
 router.post("/contact-us", contactUsValidationRules(), validate, contactUs);
 router.post("/send-quote", sendQuoteValidationRules(), validate, sendQuote);
 
